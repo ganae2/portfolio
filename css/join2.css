@@ -1,0 +1,443 @@
+@charset "utf-8";
+
+/* reset css */
+body,div,p,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,table,tr,th,td,form,fieldset,legend,input,label,select,textarea,button {margin:0; padding:0;}
+body,h1,h2,h3,h4,h5,h6 {font-size:12px; font-family:"hcR","돋움",dotum,sans-serif; color:#333;}
+a {text-decoration:none; color:#333;}
+ul,ol,li {list-style:none;}
+img,fieldset {border:none; vertical-align:middle;}
+strong,em, address {font-weight:normal; font-style:normal;}
+table {border-collapse:collapse;}
+
+/* font */
+@font-face {
+	font-family:"hcR";
+	src:url(../font/regular.woff);
+}
+
+@font-face {
+	font-family:"hcT";
+	src:url(../font/title.woff);
+}
+
+body{
+  font-family: "hcR","돋움",dotum,sans-serif;
+  font-size:14px;
+  color:#333;
+}
+  
+  a{
+	color:#333;
+	text-decoration:none;
+  }
+
+  /* layout */
+  #wrap {	width:100%; margin: 0 auto;}
+  
+
+/*헤더서식*/
+.h_wrap{
+  width:100%;
+  background:#ffffff;
+  position:relative;
+}
+.h_inner{
+  width:1200px;
+  margin:0 auto;
+  display:flex;
+  justify-content:space-between;
+}
+.h_inner h1{
+  margin-top:16px;
+  width:166px; height:28px;
+}
+.h_inner h1 a{
+  height:28px;
+  display:block;
+}
+.h_inner h1 img {
+  width: 100px;
+  height: 100px;
+  margin-top: -35px; /* 이미지 위쪽으로 10px 만큼 이동 */
+}
+
+/* search */
+.search-container {
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+}
+
+.search-container img {
+	width: 30px; /* 이미지 크기 조정 */
+	height: 30px; /* 이미지 크기 조정 */
+	margin-right: 50px;
+}
+
+.search-container p {
+	margin: 0;
+	font-size: 13px;
+	color: #fff;
+	margin-left:130px; /* 텍스트와 이미지 간의 간격 좁히기 */
+}
+/* -------------------- */
+
+.gnb_inner{
+  display:flex;
+  justify-content: space-between;
+}
+.gnb_inner > li{
+  padding:0px 25px;
+}
+.gnb_inner > li > a{
+  display:block;
+  font-weight:bold;
+  line-height:60px;
+  text-align:center;
+  font-size:16px;
+}
+.gnb_inner > li > a:hover{
+  color:#4a80af;
+}
+.gnb_inner > li > a > i.fa-angle-down{display:none;}
+.sub{
+  padding-top:10px;
+  line-height:35px;
+  position:absolute;
+  z-index: 9000;
+  display:none;
+}
+.sub a{color:#000000;}
+.sub a:hover{color:#4a80af; text-decoration:underline;}
+.sub_box{
+  width:100%; height:200px;
+  background:#ffffffcf;
+  position:absolute;
+  top:60px; left:0;
+  z-index:8999;
+  display:none;
+}
+
+.lnb{
+  display:flex;
+}
+.lnb a:first-child{
+  font-size:14px;
+  line-height:60px;
+}
+.lnb > ul{
+  width:48px; height:48px;
+  display:flex;
+  flex-wrap:wrap;
+  position:relative;
+  display:none;
+}
+.lnb > ul > li{
+  width:32px;
+  height:2px;
+  background:#666;
+  position:absolute;
+  left:6px;
+}
+.lnb > ul > li:first-child{top:12px;}
+.lnb > ul > li:nth-child(2){top:24px;}
+.lnb > ul > li:last-child{top:36px;}
+.lnb .search{
+  display:block;
+  width:32px; height:32px;
+  margin:14px 10px;
+}
+
+/* 새로운 영역 스타일링 */
+
+.home {
+    background-color: #5669ae; /* 밝은 회색 배경색 */
+    width: 100%; /* 가로 폭 */
+    margin: 20px auto; /* 상하 여백 및 중앙 정렬 */
+
+}
+
+.homeInner {
+    width: 1200px; /* 가로 폭 */
+    height: 40px; /* 세로 높이 */
+    display: flex; /* 플렉스 박스를 사용하여 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    padding: 0 10px; /* 좌우 여백 */
+    box-sizing: border-box; /* 패딩을 포함한 크기 계산 */
+	margin: 0 auto;
+ }
+ 
+.home img {
+    width: 20px; /* 이미지 가로 크기 */
+    height: auto; /* 이미지 비율 유지 */
+    margin-right: 10px; /* 이미지와 텍스트 사이의 여백 */
+    /* padding-left:160px; */
+    
+}
+
+.home p {
+  margin: 0; /* 기본 마진 제거 */
+  font-size: 14px; /* 텍스트 크기 */
+  color: #fff; /* 텍스트 색상 */
+}
+
+.home a {
+  color: #fff; /* 링크 색상 */
+  text-decoration: none; /* 링크 밑줄 제거 */
+}
+
+.home a:hover {
+  text-decoration: underline; /* 호버 시 링크 밑줄 표시 */
+}
+
+.home p > a + span {
+  margin: 0 5px; /* 경로 구분 기호와 링크 사이의 여백 */
+  color: #fff; /* 경로 구분 기호 색상 */
+}
+
+/* =======================================
+ */
+#main {
+	width:1200px;
+	margin: 0 auto 50px; /* footer와의 간격 */
+}
+#main:after { content:""; display:block; clear:both; }
+#main .title {
+  font-size: 20px; /* 제목 폰트 크기 키우기 */
+  /*margin: 0;  기본 마진 제거 */
+  /* padding-left: 165px; 왼쪽 여백 추가 */
+}
+
+.titleInner {
+	margin: 0 7px;
+}
+#main hr {
+  /* border: 1px solid #ccc; 구분선 스타일 */
+	margin: 20px 0 40px 0; /* 상하 여백 20px contents와의 간격 --px*/
+  	background:#ccc;
+	height:1px;
+	border:0;
+	font-size: 0;
+}
+
+/* 
+outline:1px solid green; */
+
+section {margin:0 0 0 50px; }/* 사이드메뉴 제외한 사이 여백 */
+
+.snb {
+	float:left;
+	/*margin:30px 0;  사이드메뉴 여백 위에게 안먹어서 이것으로 */
+	margin: 0 7px;
+}
+.sideMenu{
+	background-color:#F4F4F4;
+	width:230px;
+	margin:0 auto;
+	border-radius:10px;
+}
+
+dt {
+	text-align:center;
+	background-color:#A1B7CD;
+	/* background-color:#829FBC; */
+	border:1px solid #eee;
+	border-radius:10px 10px 0 0;
+	color:#fff;
+	height:125px;
+	line-height:125px;
+	font-size:18px;
+}
+dd {
+	padding-left:15px; 
+	color:#2f2f2f;
+	background-color:#F4F4F4;
+	height:46px;	
+	line-height:46px;
+	font-size:14px;	
+	border-bottom:1px solid #BCBCBC;
+}
+dd a {
+	display:block;
+	color:#5684C9;
+	background:url(..//images/ico_arrow_sm.png) right no-repeat;
+}
+dd:last-of-type {
+	border-radius:0 0 10px 10px;
+	border-bottom:1px solid #F4F4F4;
+}
+
+/* 
+outline:1px solid blue; */
+.contents { 
+	float:left;
+}
+
+.contInner {
+}
+
+/* .contents p {
+	margin:30px 0 0 0;
+} */
+
+.sTitle, .xsTitle {
+
+}
+h3.sTitle {
+	color:#5277A9;
+	font-size:22px;
+	margin:0 0 20px 0;
+}
+
+.xsTitle {
+	color:#1f75d6;
+	font-size:18px;
+	margin:20px 0 10px 0;
+	font-weight:normal;
+}
+
+#main .expTitle {
+	font-size: 20px; /* 설명 텍스트 폰트 크기 */
+	margin: 10px 0 20px 0; /* 상단 여백 없음, 하단 여백 20px */
+	/*padding-left: 165px;  왼쪽 여백 추가 */
+  }
+
+ 
+.title{font-size:22px; display: block; position:relative; left:350px; top:0; width:155px; height:35px;}
+
+#array{width:310px; height:80px;  margin:50px auto 30px;  position:relative;}
+#array p {text-align:center; }
+h4 {text-align:center; }
+
+
+   .array1,.array2,.array3{margin-right:20px; ;}
+       #array h3{z-index:-100;width:247px; height:2px; background-color:#E9EDF7; 
+		 margin-left:30px; margin-top: 25px; position:absolute; left:0; top:0;} 
+         .array1{width:60px;  float:left; text-align:center;  }
+            .array1 p{ background-color:#E9EDF7; width: 52px; height: 52px;
+                text-align:center; line-height:52px; color:#B3BDD6; border-radius:26px; font-size:20px;}
+            .array1 h4{font-size:14px; color:#B3BDD6; margin-top:10px; }
+         .array2{width:125px; height:80px; float:left;}
+            .array2 p{background-color:#5277A9; width: 52px; height: 52px; text-align:center; color:white; border-radius:26px; font-size:20px;margin:0 0 10px 35px;}
+            .array2 h4{font-size:14px; float:left; color:#B3BDD6; margin-left:10px;}
+               .array2 p img{width: 26px; height:26px; margin-top:13px ;}
+         .array3{width:60px; height:80px; float:left;}
+            .array3 p{background-color:#E9EDF7; width: 52px; height: 52px; text-align:center; color:#B3BDD6; line-height:52px; border-radius:26px; font-size:20px;margin-bottom: 10px;}
+            .array3 h4{font-size:14px; float:left; color:#B3BDD6} 
+
+
+          
+          
+         #log{width:460px; height:384px; margin:0 auto;  position:relative;}
+            #log input[type="text"],[type="password"]{width: 434px; height:56px; font-size:18px; border-radius:10px;
+               margin-top:25px; border:1px solid #C2C2C2; padding-left: 24px; color:#8C8B8B}
+               #log input[type="text"]{background-color:#F0F3F6;}
+               #log  img{position:absolute; left:420px; top:125px;}
+               #log small{width:211px; height:21px; font-size: 16px; margin:0 0 40px 120px; color:#9A9797;} 
+                  #log small a{color:#9A9797;} 
+                  #log button a{
+                    color:#fff;
+                  }
+               #log button{width:460px; height:50px; background-color:#5669ae; color:white; font-size:20px; border-radius:10px; margin:40px 0 25px 0;}
+            #checkbox{width:397px; height:254px;  margin: 40px auto 65px; }
+               #checkbox .one,.two,.three,.four,.five {width:395px; height:50px; border-bottom:1px solid #DFDFDF; line-height:50px; float:left;}       
+               #checkbox input[type="checkbox"]{width:25px; height:25px; border-radius: 3px;  float:left; display:block; margin: 10px 5px 0 0; }
+               #checkbox label[for="one"]{font-size:20px; color:#2B3C5B; }
+               #checkbox label[for="two"]{font-size:16px; color:#2B3C5B; }
+               #checkbox label[for="three"]{font-size:16px; color:#2B3C5B; }
+               #checkbox label[for="four"]{font-size:16px; color:#2B3C5B; }
+               #checkbox label[for="five"]{font-size:16px; color:#2B3C5B; }
+
+
+               .chat_btn, .top_btn{
+                  display:block;
+                  width:60px; height:60px;
+                  border-radius:50%;
+                  position:fixed;
+                  right:15px;
+                  z-index:9999;
+                }
+                .chat_btn{overflow:hidden; bottom:15px;}
+                .chat_btn > img{
+                  width:100%;
+                }
+                .top_btn{
+                  background:#F0F0F0;
+                  text-align:center; bottom:15px; display:none;
+                }
+                .top_btn i.fas{
+                  font-size:25px;
+                  line-height:60px;
+                  color:#0F2F6E;
+                }
+                /* footer*/
+                #footer {   
+                background-color: #5669ae;
+                width:100%;
+                height:160px;
+                }
+                
+                /* 
+                outline:1px solid blue; */
+                
+                .footerInner {
+                margin:0 auto;
+                padding:31px 0;
+                width:1200px;
+                }
+                
+                .footLogo { 
+                display: flex;
+                width: 120px;
+                height: 50px;
+                }
+                
+                .footAdd { 
+                position:relative; 
+                padding-top:20px;
+                color:#ffffff;
+                }
+                
+                .footAdd a{
+                color:#ffffff;
+                }
+                
+                .footAdd a:hover {
+                color:#000000;
+                }
+                
+                #footer li { 
+                font-size: 16px; 
+                display:inline;  
+                color:#ffffff;
+                }
+                
+                
+                #footer .copyright { 
+                position:relative; 
+                width:100%; 
+                font-size: 15px; 
+                letter-spacing:-0.3px; 
+                padding-top:10px;
+                }
+                
+                address { 
+                line-height:26px; }
+                
+                .sns {
+                position:absolute; 
+                bottom:0; 
+                right:0;
+                }
+                
+                .sns li { 
+                padding-left:20px;
+                }
+                .sns li img {
+                height:26px;
+                
+                }
+              
+                #clock {
+                  font-weight: bold;
+              }
